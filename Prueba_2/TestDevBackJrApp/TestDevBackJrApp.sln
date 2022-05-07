@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDevBackJrApp", "TestDevBackJrApp\TestDevBackJrApp.csproj", "{CCA0A11A-86BA-4403-A156-EAD1CB58F40B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core\Core.csproj", "{F8340DC2-D96B-42B3-8FA3-CFC761EBBBB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{CF53F2C8-8783-4FC5-BC18-34BA5A03E1F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA0A11A-86BA-4403-A156-EAD1CB58F40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA0A11A-86BA-4403-A156-EAD1CB58F40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA0A11A-86BA-4403-A156-EAD1CB58F40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA0A11A-86BA-4403-A156-EAD1CB58F40B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8340DC2-D96B-42B3-8FA3-CFC761EBBBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8340DC2-D96B-42B3-8FA3-CFC761EBBBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8340DC2-D96B-42B3-8FA3-CFC761EBBBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8340DC2-D96B-42B3-8FA3-CFC761EBBBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF53F2C8-8783-4FC5-BC18-34BA5A03E1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF53F2C8-8783-4FC5-BC18-34BA5A03E1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF53F2C8-8783-4FC5-BC18-34BA5A03E1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF53F2C8-8783-4FC5-BC18-34BA5A03E1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EE5C16C-D808-41AE-8D24-A06CEE63C828}
+	EndGlobalSection
+EndGlobal
