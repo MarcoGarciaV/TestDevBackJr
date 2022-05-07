@@ -16,11 +16,11 @@ namespace Core
         DataTable table = new DataTable();
         SqlCommand command = new SqlCommand();
 
-        public List<Usuario> ObtenerUsuario()
+        public List<Empleado> ObtenerUsuario()
         {
-            List<Usuario> ltsusuario = null;
+            List<Empleado> ltsEmpleado = null;
 
-            string query = "SELECT TOP 10 u.userId, u.Login, u.Nombre, u.Paterno, u.Materno FROM dbo.usuarios AS u";
+            string query = "SELECT TOP 10 u.userId, u.Login, u.Nombre, u.Paterno, u.Materno, e.Sueldo FROM dbo.usuarios AS u INNER JOIN dbo.empleados AS e ON u.userId = e.userId ORDER BY u.userId DESC";
 
             command.Connection = connection.OpenConnection();
             command.CommandType = CommandType.Text;
@@ -33,7 +33,7 @@ namespace Core
 
             if (tableRows.Count > 0)
             {
-                ltsusuario = new List<Usuario>();
+                ltsEmpleado = new List<Empleado>();
 
                 foreach (DataRow loFila in tableRows)
                 {
@@ -44,13 +44,48 @@ namespace Core
                         Nombre =loFila["Nombre"].ToString(),
                         Paterno =loFila["Paterno"].ToString(),
                         Materno = loFila["Materno"].ToString(),
-
                     };
 
-                    ltsusuario.Add(usuario);
+                    Empleado empleado = new Empleado()
+                    {
+                        Sueldo = decimal.Parse(loFila["Sueldo"].ToString()),
+                        usuario = usuario
+                    };
+
+                    ltsEmpleado.Add(empleado);
                 }
             }
-            return ltsusuario;
+            return ltsEmpleado;
+        }
+
+        public bool VerificarUsuarioExiste(Usuario usuario)
+        {
+            bool usuarioExiste = false;
+
+            string query = "SELECT COUNT(*) AS usuarioExiste FROM dbo.usuarios AS u WHERE u.Login = @Login OR (u.Nombre =@Nombre AND u.Paterno = @Paterno AND u.Materno= @Materno )";
+
+            command.Connection = connection.OpenConnection();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@Login", usuario.Login);
+            command.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+            command.Parameters.AddWithValue("@Paterno", usuario.Paterno);
+            command.Parameters.AddWithValue("@Materno", usuario.Materno);
+            read = command.ExecuteReader();
+            table.Load(read);
+            connection.CloseConnection();
+
+            DataRowCollection tableRows = table.Rows;
+
+            if (tableRows.Count > 0)
+            {
+
+                foreach (DataRow loFila in tableRows)
+                {
+                    usuarioExiste = int.Parse(loFila["usuarioExiste"].ToString()) > 0;
+                }
+            }
+            return usuarioExiste;
         }
 
         public Empleado ObtenerUsuarioPorId(int Usuario_ID)

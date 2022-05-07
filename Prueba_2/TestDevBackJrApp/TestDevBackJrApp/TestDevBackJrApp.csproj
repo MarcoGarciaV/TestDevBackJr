@@ -203,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="files\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

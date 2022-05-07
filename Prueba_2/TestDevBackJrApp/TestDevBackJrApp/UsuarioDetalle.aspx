@@ -3,9 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div><h3>Información Usuario</h3></div>
+                <div runat="server" id="informacionUsuarioTitulo" visible="false"><h3>Información Usuario</h3></div>
                 <hr />
                 <div class="row">
+                    <div id="informacionUsuarioDiv" runat="server" visible="false">
                     <div class="col-md-6">
                         <div class="form-group">
                             <asp:Label runat="server">Login</asp:Label>
@@ -34,6 +35,7 @@
                             <span id="maternoError" runat="server" class="red" visible="true"></span>
                         </div>
                     </div>
+                        </div>
                 <h3 class="ml-12">Información Empleado</h3>
                 <hr />
                     <div class="col-md-4">
@@ -49,6 +51,7 @@
                         <div class="form-group">
                             <asp:LinkButton runat="server" ID="lnkRegistrarUsuario" OnClick="lnkRegistrarUsuario_Click" CssClass="btn btn-success" visible="true">Registrar</asp:LinkButton>
                             <asp:LinkButton runat="server" ID="lnkModificaUsuario" OnClick="lnkModificaUsuario_Click" CssClass="btn btn-warning" Visible="true">Modificar</asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="lnkRegresar" OnClick="lnkRegresar_Click" CssClass="btn btn-info" Visible="true">Regresar</asp:LinkButton>
                         </div>
                     </div>
                 </div>

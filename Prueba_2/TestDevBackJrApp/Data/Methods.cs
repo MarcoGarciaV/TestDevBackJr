@@ -9,7 +9,7 @@ namespace Data
 {
     public class Methods
     {
-        public List<Usuario> ObtenerUsuarios()
+        public List<Empleado> ObtenerUsuarios()
         {
             DataDb db = new DataDb();
 
@@ -45,6 +45,12 @@ namespace Data
         {
             DataDb db = new DataDb();
             return db.InsertarEmpleado(empleado);
+        }
+
+        public bool VerificarUsuarioExiste(Usuario usuario)
+        {
+            DataDb db = new DataDb();
+            return db.VerificarUsuarioExiste(usuario);
         }
     }
 }

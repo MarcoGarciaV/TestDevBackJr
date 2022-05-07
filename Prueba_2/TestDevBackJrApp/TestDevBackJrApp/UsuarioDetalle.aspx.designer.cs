@@ -15,6 +15,24 @@ namespace TestDevBackJrApp
     {
 
         /// <summary>
+        /// informacionUsuarioTitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl informacionUsuarioTitulo;
+
+        /// <summary>
+        /// informacionUsuarioDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl informacionUsuarioDiv;
+
+        /// <summary>
         /// txtLogin control.
         /// </summary>
         /// <remarks>
@@ -130,5 +148,14 @@ namespace TestDevBackJrApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkModificaUsuario;
+
+        /// <summary>
+        /// lnkRegresar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkRegresar;
     }
 }
